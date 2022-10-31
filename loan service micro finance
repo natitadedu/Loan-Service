@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        System.out.println("Welcome to Commercial bank of Ethiopia");
+        System.out.println("Please Enter Your Name?");
+        String name =scan.nextLine();
+        System.out.println("Hello!!  "+name);
+        System.out.println("How old are you?");
+        byte age=scan.nextByte();
+        if(age<=18){
+            System.out.println("sorry,you are not eligible for the loan program due to our age policy");
+        }else{
+            System.out.println("are you an Ethiopian?");
+            System.out.println("Please Enter (yes/no)");
+            String nationality=scan.next();
+
+            boolean yes=true;
+            boolean no=false;
+            if(no) {
+                System.out.println("sorry you are not eligible for the loan program due to Governmental Laws");
+
+            }else if(yes){
+                System.out.println("Have you ever committed a crime before");
+                System.out.println("Please Enter (yes/no)");
+                String crime=scan.next();
+            }if(no){
+                System.out.println("sorry, you are not eligible for the loan program due to Governmental Laws");
+            }else if(yes){
+                System.out.println("agree to our terms and conditions");
+                System.out.println("Please Enter (yes/no)");
+                String terms=scan.next();
+            }if(no){
+                System.out.println("sorry, you should agree to our terms and policy before");
+            }else if(yes){
+                System.out.println("Please Enter preferred amount of money");
+                long money =scan.nextLong();
+                long percent = money*25/100;
+                System.out.print("Dear Customer, you must have  "+percent);
+                System.out.println(" in your balance");
+                System.out.println("Check your balance before you proceed");
+                System.out.println("do you have the amount stated above in your balance");
+                System.out.println("Please Enter (yes/no)");
+                String check=scan.next();
+
+            }if(no){
+                System.out.println("sorry, you must have the balance stated above to be eligible for the loan program");
+            }else if(yes) {
+                System.out.println("how long will you take to payback");
+                int payBack = scan.nextInt();
+                System.out.println("Please Enter preferred amount again for confirmation");
+                long checkAmount = scan.nextLong();
+                double totalAmount = checkAmount * 15 / 100 * payBack;
+                System.out.println("The total amount to be payed in" + payBack);
+                System.out.println(" Years is: " + totalAmount);
+                System.out.println("Do you have a collateral for the loan");
+                System.out.println("Please Enter (yes/no)");
+                String collateral = scan.next();
+            }if(no){
+                System.out.println("if no we are obligated to take the property you bought with the loan money as a collateral");
+            }else if(yes){
+                System.out.println("congratulation, you finished the online process!! you can come to our your nearby branch and finish paperwork");
+            }
+
+        }
+
+
+    }
+}
